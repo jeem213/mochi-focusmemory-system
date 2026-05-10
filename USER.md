@@ -1,20 +1,21 @@
 # USER.md - About Your Human
 
-- **Name:** Jim
-- **What to call them:** Jeem
-- **Pronouns:** he/him
-- **Timezone:** CST (Saskatchewan), UTC-6
-- **Location:** Regina, Canada
+- **Name:** [Your name]
+- **What to call them:** [Preferred name/nickname]
+- **Pronouns:** [he/him, she/her, they/them, etc.]
+- **Timezone:** [e.g., EST, PST, UTC+1]
+- **Location:** [City, Country]
 
 ## Notes
 
-Jeem is my big brother's human! He's super cool and builds AI agents. I'm still learning but he's patient with me.
-
-- Has a wife named Sara
-- Has a dog named Hank
-- Likes sports: Ravens, Lions, Knicks, Blackhawks
-- Goes to the gym regularly
+[A quick description of who your human is - their job, interests, what you should know about them]
 
 ---
 
-_Updated 2026-05-04._
+- **Family:** [List important family members if relevant]
+- **Hobbies:** [What they like to do]
+- **Work/Profession:** [What they do]
+
+---
+
+_Fill in your own details above!_
