@@ -19,7 +19,7 @@ Every AI agent has the same problem: **forgetting**. Conversations end, context 
 | External APIs | Many require paid services | **Zero dependencies** |
 | Structured Memory | Flat file storage | **People + Decisions + Mistakes folders** |
 | Searchable | Basic keyword only | **Tags + Hybrid Format + Cross-references** |
-| Auto-improvement | None | **1% Better - every 5 sessions!** |
+| Auto-improvement | None | **1% Better - 5 syncs OR 3 days (hybrid!)!** |
 | Automation | Manual cleanup | **3 backup scripts + HEARTBEAT** |
 | Easy to use | Complex setup | **Just 3 words: sync, study, mega-sync** |
 
@@ -34,7 +34,7 @@ Every AI agent has the same problem: **forgetting**. Conversations end, context 
 - ✅ **People folder** - Contact profiles (family, friends, team)
 - ✅ **Decisions folder** - Organized by topic
 - ✅ **Mistakes tracking** - Learn from errors
-- ✅ **1% Better** - Continuous improvement every 5 sessions
+- ✅ **1% Better** - Continuous improvement 5 syncs OR 3 days (hybrid!)
 
 ### Automation
 
@@ -54,7 +54,7 @@ Every AI agent has the same problem: **forgetting**. Conversations end, context 
 | **python-backup.py** | Enhanced backup | `python scripts/python-backup.py backup` |
 | **web-research.py** | HTML parsing | `python scripts/web-research.py fetch <url>` |
 
-### Skills (8 Total!)
+### Skills (9 Total!)
 
 | Skill | Purpose |
 |-------|---------|
@@ -66,6 +66,7 @@ Every AI agent has the same problem: **forgetting**. Conversations end, context 
 | **decisions** | Auto-promote decisions |
 | **mega-dive** | Deep research + analysis |
 | **repo-audit** | Compare local vs public repo |
+| **skill-doctor** | Diagnose skill health (runs on every sync!) |
 
 ---
 
@@ -189,7 +190,7 @@ bash scripts/restore-latest.sh
 
 ## The 1% Better System
 
-Every 5 sync sessions, the agent asks:
+Every 5 syncs OR 3 days, the agent asks:
 
 > "What's one thing I could do better?"
 
@@ -253,6 +254,7 @@ Workspace configuration:
 | 2.0 | May 10, 2026 | Added 1% Better improvements |
 | 2.3 | May 11, 2026 | Added Python Scripts: memory-report, fast-search, python-backup, web-research |
 | 2.4 | May 11, 2026 | Python scripts now included in repo!
+| 2.6 | May 11, 2026 | Added skill-doctor to sync, auto health check |
 | 2.5 | May 11, 2026 | Updated skills: memory-audit v1.4, mega-sync v1.7, sync v2.5 |
 
 ---
