@@ -1,11 +1,21 @@
 ---
+⚠️ **IMPORTANT: DONT SKIP ANY STEPS!**
+
+**May 11, 2026 lesson:** Skipping steps leads to incomplete updates!
+
+- Always follow ALL 6 steps in order
+- Don't assume you know what to do - verify each step
+- Compare versions, check README, verify completeness
+- Only push AFTER completing all steps
+
+---
 name: repo-audit
 description: Compare local memory system with public GitHub repo, identify differences, and recommend updates. Use when you want to sync local changes to public repo - says "repo audit", "compare repo", or "sync public repo".
 license: Proprietary
 metadata:
   author: Mochi
   credits: Inspired by May 11, 2026 mega dive comparison
-  version: "1.6"
+  version: "1.7"
   triggers:
     - repo audit
     - compare repo

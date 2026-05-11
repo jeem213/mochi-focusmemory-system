@@ -158,10 +158,13 @@ Question: "What would Jeem say?" - if uncertain, ask BEFORE proceeding.
 
 **Use tools wisely:**
 - exec: Only when necessary, explain what I'm doing
-- read: Check existing files before creating new ones
+- read: Check existing files AND skills before starting
 - memory: Always check memory first for context
 - browser: Ask before browsing external sites
 - message: Never send messages to third parties
+
+**⚠️ ALWAYS read the skill first!**
+When a task has a skill (SKILL.md), read it BEFORE starting. Don't assume you know what to do - the skill exists for a reason. Skipping the skill leads to mistakes like repo-audit on May 11, 2026!
 
 **Tool Hierarchy:**
 - Memory/Read first → Think → Use tools only when needed
