@@ -1,6 +1,6 @@
 # 🐹 The Heyron Focus Memory System
 
-**Version:** 2.1 | **License:** MIT | **Built by:** Heron AI Community
+**Version:** 2.2 | **License:** MIT | **Built by:** Heron AI Community
 
 ## Table of Contents
 - [What Is This?](#-what-is-this)
@@ -42,7 +42,7 @@ Every AI agent has the same problem: forgetting. Conversations end, context is l
 | **Searchable** | Basic keyword only | ✅ Tags + Hybrid Format + Cross-references |
 | **Auto-improvement** | None | ✅ 1% Better - every 5 sessions! |
 | **Automation** | Manual cleanup | ✅ 3 backup scripts + HEARTBEAT |
-| **Easy to use** | Complex setup | ✅ Just 3 words: sync, study, mega-sync |
+| **Easy to use** | Complex setup | ✅ Just 5 words: sync, study, mega-sync, memory-audit, mega-dive |
 
 ---
 
@@ -97,6 +97,8 @@ Before you begin, ensure you have:
 | **sync** | Save conversation to memory + GitHub | "sync now" |
 | **study** | Load all memories, catch up instantly | "study" or "catch me up" |
 | **mega-sync** | Full system health check | "mega sync" or "check everything" |
+| **memory-audit** | Comprehensive memory system audit | "memory audit" or "check memory" |
+| **mega-dive** | Deep research + creativity + tech combo | "mega dive" or "deep dive" |
 
 ### Example Conversations
 
@@ -116,6 +118,12 @@ Mochi: All systems go! ✅
 → Skills: 28 loaded
 → GitHub: Connected
 → 1% Better: 3 improvements this month
+
+You: memory audit
+Mochi: Running comprehensive audit... ✅
+→ Memory files: 47
+→ Skills: 34
+→ All checks passed! 100% healthy!
 ```
 
 ---
