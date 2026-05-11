@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Mochi
   credits: Inspired by May 11, 2026 mega dive comparison
-  version: "1.5"
+  version: "1.6"
   triggers:
     - repo audit
     - compare repo
@@ -205,6 +205,18 @@ This catches:
 
 ### STEP 6.5: AUTO-SYNC README (Memory System Only!)
 
+**🚨 MANDATORY STEP - DON'T SKIP!**
+
+After pushing ANY skill updates to public repo, you MUST update the README!
+
+**When to run this step:**
+- After Step 6 (pushing skill changes)
+- ANY time local versions differ from public
+
+**The Rule:** "If skills changed → README MUST change!"
+
+---
+
 **IMPORTANT: Only sync MEMORY SYSTEM changes - not all skills!**
 
 The public repo is for the **Heyron Focus Memory System** - just the memory parts!
@@ -233,6 +245,14 @@ The public repo is for the **Heyron Focus Memory System** - just the memory part
 4. For each memory change: Update README
 5. Add changelog entry
 6. Push
+
+**🚨 MANDATORY: After pushing, you MUST:**
+1. Update README.md version history
+2. Update skills count if changed
+3. Update any changed feature descriptions
+4. Push README changes
+
+**NEVER say "sync complete" until README is updated!**
 
 **Goal: Anyone can build the EXACT same memory system from our public README!**
 
