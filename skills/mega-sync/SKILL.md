@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Jeem & Stuart
   credits: "Original concept by Jeem & Stuart"
-  version: "1.4"
+  version: "1.7"
   triggers:
     - mega sync
     - system check

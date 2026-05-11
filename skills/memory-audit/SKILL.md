@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Mochi
   credits: Inspired by 2026-05-11 mega dive audit
-  version: "1.2"
+  version: "1.4"
   triggers:
     - memory audit
     - audit memory
@@ -377,7 +377,28 @@ Ask Jeem before fixing:
 ---
 
 *Skill version: 1.3 - Updated: May 11, 2026*
-*Note: v1.3 - Added Step 7: HTML Report + Step 5.7: Python Backup Verify!*
+---
+
+### Step 8: AUTO-SNAPSHOT (NEW!)
+
+**Generate automatic system snapshot!**
+
+```bash
+/home/openclaw/.venv/bin/python scripts/auto-snapshot.py
+```
+
+This creates an entry in `memory/snapshots.md` with:
+- Memory files count
+- Skills count
+- Rules count
+- People, decisions, mistakes, improvements counts
+- Backup count
+
+**Run this during every audit!**
+
+---
+
+*Note: v1.4 - Added Step 8: Auto-Snapshot Generator!*
 *Author: Mochi - Memory + Rules Expert 🐹💜*
 *Changes in v1.1:*
 *- Added Step 2.5: Key memory files check (permanent.md, auto-learned.md)*

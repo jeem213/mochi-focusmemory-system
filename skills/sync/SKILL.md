@@ -4,7 +4,7 @@ description: Save conversations to memory with AUTO TAGGING + personal GitHub ba
 license: Proprietary
 metadata:
   author: Jeem & Stuart
-  version: "2.4"
+  version: "2.5"
   triggers:
     - sync
     - sync now
@@ -147,7 +147,10 @@ Add to file using these prefixes:
 
 ### Step 4.6: UPDATE NUMERIC TRACKING (HYBRID!)
 
-**IMPORTANT: If numeric data shared, update auto-learned.md!**
+**IMPORTANT: If numeric data shared, update auto-learned.md (use CATEGORIES)!**
+
+Auto-learned now has categories:
+- Preferences, Corrections, Skills, Decisions, Mistakes, Improvements
 
 1. Check conversation for numeric data:
    - "went to the gym" → gym session
@@ -160,7 +163,16 @@ Add to file using these prefixes:
 
 ### Step 4.7: LOG MISTAKES (NEW!)
 
-**IMPORTANT: If any errors occurred during session, log to memory/mistakes/!**
+**IMPORTANT: If any errors occurred during session, log to memory/mistakes/ (use v2.0 template)!**
+
+New mistakes template (v2.0):
+```markdown
+## YYYY-MM-DD - [Mistake Title]
+**What happened:** [Description]
+**Why it happened:** [Root cause]
+**Lesson learned:** [How to avoid/fix]
+**Fixed:** [Resolution]
+```
 
 1. Did any tool fail?
 2. Did I give wrong information?
@@ -169,11 +181,7 @@ Add to file using these prefixes:
 
 If YES to any:
 - Open memory/mistakes/YYYY-MM-DD.md
-- Add entry:
-```markdown
-## Error: [Brief title]
-- **What happened:** [Description]
-- **What I learned:** [Lesson]
+- Add entry using template above!
 - **How to avoid:** [Prevention]
 ```
 
@@ -504,7 +512,8 @@ Report to user:
 
 ---
 
-*Skill version: 2.4 - Last updated: May 11, 2026*
+*Skill version: 2.5 - Last updated: May 11, 2026*
+*Note: v2.5 - Added v2.0 templates for auto-learned + mistakes!*
 *Note: v2.4 - Added Step 5.5: Python Enhanced Backup!*
 *Note: v2.3 - Added HYBRID 1% Better system (5 syncs OR 3 days)!*
 *Note: v2.3 - Made proactive suggestion MANDATORY!*
