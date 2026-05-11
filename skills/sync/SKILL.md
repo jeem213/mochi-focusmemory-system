@@ -4,7 +4,7 @@ description: Save conversations to memory with AUTO TAGGING + personal GitHub ba
 license: Proprietary
 metadata:
   author: Jeem & Stuart
-  version: "2.6"
+  version: "2.7"
   triggers:
     - sync
     - sync now
@@ -46,6 +46,12 @@ Triggered when the user says:
 
 **Jeem trusts me to auto-tag!** I don't need to ask - I just add relevant tags and tell the user what I used.
 
+**NEW! Check tag history for smart suggestions:**
+```bash
+cat memory/tag-history.md | grep -A20 "Smart Suggestions"
+```
+This gives personalized tag recommendations!
+
 1. Scan recent conversation for topics:
    - Sports teams → #ravens, #knicks, #lions, #blackhawks
    - Projects → #project, #agent-jam, #memory-kit
@@ -55,6 +61,8 @@ Triggered when the user says:
    - Money → #business, #money, #startup
    - Important moments → #important, #milestone
    - Family → #family, #stuart, #mochi
+   - Rules/Audits → #rules #memory #important
+   - Skills work → #skills #important #mochi
 
 2. ALWAYS add #session as base tag
 3. Add any relevant topic tags (max 4-5)
@@ -211,6 +219,23 @@ After analyzing conversation content, you MUST add priority tag:
 **Examples:**
 - "We decided to add memory rules" → #important #decision
 - "Just chatting about the game" → #routine
+
+### Step 4.7b: UPDATE TAG HISTORY (NEW!)
+
+**IMPORTANT: Track tags for smarter suggestions!**
+
+After auto-tagging, record to memory/tag-history.md:
+```bash
+# Add entry to Tag Usage Log:
+| YYYY-MM-DD | [session topic] | [tags used] | No |
+```
+
+**Why:** This builds our smart tag suggestions over time!
+
+**Example:**
+```
+| 2026-05-11 | Rules/Memory/Repo Audit | #session #rules #memory #important | No |
+```
 
 ### Step 4.8: CHECK CROSS-REFERENCES (IMPLEMENTED!)
 
@@ -444,6 +469,27 @@ This catches any skill issues BEFORE they cause problems!
 
 **This makes every sync also a health check!**
 
+### Step 6f: MEMORY HEALTH CHECK (NEW!)
+
+**Run memory-audit for complete system health!**
+
+```bash
+/home/openclaw/.venv/bin/python ~/.openclaw/workspace-mochi/scripts/auto-snapshot.py
+```
+
+This creates a silent snapshot of:
+- Memory files count
+- Skills count  
+- Rules count
+- People, decisions, mistakes counts
+
+**How it works:**
+- Runs silently after every sync
+- Only reports if issues found
+- Adds to memory/snapshots.md automatically
+
+**This makes EVERY SYNC a FULL SYSTEM CHECK!**
+
 
 ### Step 7: CONFIRM
 
@@ -543,7 +589,8 @@ Mochi: [what happens]
 
 ---
 
-*Skill version: 2.5 - Last updated: May 11, 2026*
+*Skill version: 2.7 - Last updated: May 11, 2026*
+*Note: v2.7 - Added Step 6f: Memory Health Check (auto-snapshot on every sync)!*
 *Note: v2.5 - Added v2.0 templates for auto-learned + mistakes!*
 *Note: v2.4 - Added Step 5.5: Python Enhanced Backup!*
 *Note: v2.3 - Added HYBRID 1% Better system (5 syncs OR 3 days)!*
