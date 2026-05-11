@@ -398,6 +398,66 @@ This creates an entry in `memory/snapshots.md` with:
 
 ---
 
+## Time Estimate
+
+| Step | Time |
+|------|------|
+| Check for stray files | 10s |
+| Verify memory folders | 10s |
+| Verify key files | 10s |
+| Check config files | 10s |
+| Test memory function | 15s |
+| Verify skills | 15s |
+| Verify backups | 10s |
+| Auto-snapshot | 5s |
+| **Total** | **~90s** |
+
+---
+
+## Error Handling
+
+| Error | What to Do |
+|-------|------------|
+| Stray .used files found | Auto-fix: delete them |
+| Missing folders | Note in report, not critical |
+| Missing key files | Flag as issue to fix |
+| Backups missing | Note in report |
+| Skill SKILL.md missing | Note which skill |
+
+---
+
+## Examples
+
+### Example 1: Running Manual Audit
+```
+You: memory audit
+Mochi: 🔍 Starting comprehensive memory audit...
+✅ Memory folders exist: people/, decisions/, mistakes/, improvements/, backups/
+✅ Key files exist: permanent.md, auto-learned.md, snapshots.md
+✅ Skills: 34 skills with SKILL.md
+✅ Backups: 12 backup files
+📊 Memory files: 45 | Skills: 34 | Rules: 10
+🎯 Issues found: 0
+```
+
+### Example 2: Auto-Run During Sync
+```
+🔄 Sync Complete
+📋 Running memory audit...
+✅ All checks passed!
+📊 System healthy!
+```
+
+---
+
+## Related Skills
+
+- `skills/study` - Load memory at session start
+- `skills/sync` - Save session with auto-tagging
+- `skills/skill-audit` - Audit skills
+
+---
+
 *Note: v1.4 - Added Step 8: Auto-Snapshot Generator!*
 *Author: Mochi - Memory + Rules Expert 🐹💜*
 *Changes in v1.1:*

@@ -513,6 +513,14 @@ Report to user:
 
 ---
 
+## Examples
+
+### Example 1
+```
+You: [trigger phrase]
+Mochi: [what happens]
+```
+
 ## Related Skills
 
 - `skills/study` - Load memories by tag
