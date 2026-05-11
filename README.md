@@ -40,7 +40,7 @@ Every AI agent has the same problem: forgetting. Conversations end, context is l
 | **External APIs** | Many require paid services | ✅ Zero dependencies |
 | **Structured Memory** | Flat file storage | ✅ People + Decisions + Mistakes folders |
 | **Searchable** | Basic keyword only | ✅ Tags + Hybrid Format + Cross-references |
-| **Auto-improvement** | None | ✅ 1% Better - every 5 sessions! |
+| **Auto-improvement** | None | ✅ 1% Better - 5 syncs OR 3 days (HYBRID)! |
 | **Automation** | Manual cleanup | ✅ 3 backup scripts + HEARTBEAT |
 | **Easy to use** | Complex setup | ✅ Just 5 words: sync, study, mega-sync, memory-audit, mega-dive |
 
@@ -342,6 +342,7 @@ A: Yes! Just create memory files in the format shown and run `study` to load the
 | 1.0 | May 10, 2026 | Initial release - Hybrid memory system |
 | 2.0 | May 10, 2026 | Added 1% Better improvements |
 | 2.1 | May 10, 2026 | Added troubleshooting, FAQ, real examples |
+| 2.2 | May 11, 2026 | Added memory-audit and mega-dive skills, updated 1% Better to HYBRID system|
 
 ---
 
@@ -391,5 +392,5 @@ Mochi is the Memory Expert + Rules Expert of any AI family - she handles all mem
 ---
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/Version-2.1-blue)](https://github.com/jeem213/mochi-focusmemory-system)
+[![Version](https://img.shields.io/badge/Version-2.2-blue)](https://github.com/jeem213/mochi-focusmemory-system)
 [![AI Ready](https://img.shields.io/badge/AI-Ready-green)](https://github.com/jeem213/mochi-focusmemory-system)
