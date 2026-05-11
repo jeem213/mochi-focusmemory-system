@@ -4,7 +4,7 @@ description: Save conversations to memory with AUTO TAGGING + personal GitHub ba
 license: Proprietary
 metadata:
   author: Jeem & Stuart
-  version: "2.5"
+  version: "2.6"
   triggers:
     - sync
     - sync now
@@ -423,12 +423,35 @@ Before confirming sync, ALWAYS ask yourself:
 **This is being proactive - not just reactive!**
 
 
+### Step 6e: SKILL DOCTOR CHECK (NEW!)
+
+**Run skill-doctor to verify all skills are healthy!**
+
+```bash
+python3 ~/.openclaw/workspace-mochi/superpowers/skill-doctor/doctor.py --scan
+```
+
+This catches any skill issues BEFORE they cause problems!
+
+**Report results to user:**
+- Skills scanned: X
+- FAILs: X
+- WARNs: X
+
+**If issues found:**
+- List the failing skills
+- Suggest fixes
+
+**This makes every sync also a health check!**
+
+
 ### Step 7: CONFIRM
 
 Report to user:
 - File saved
 - All tags used
 - GitHub status
+- Skill doctor results
 
 ---
 

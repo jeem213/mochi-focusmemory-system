@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Jeem & Mochi
   credits: "Created by Jeem & Mochi"
-  version: "1.0"
+  version: "2.0"
   triggers:
     - promote decisions
     - organize decisions
@@ -18,6 +18,21 @@ metadata:
 ---
 
 # Decisions Skill - Auto-Promote Decisions
+
+**UPDATED (v2.0):** Now uses structured decision template!
+
+## Decision Template (v2.0)
+```markdown
+## YYYY-MM-DD
+**Decision:** [Short title]
+- **Context:** Why this decision was needed
+- **Options considered:** What alternatives we thought about
+- **Chosen:** What we decided
+- **Impact:** How it affects the system
+- **Review date:** When to revisit (optional)
+```
+
+---
 
 This skill automatically scans memory files for #decision tags and promotes them to the organized decisions folder. It makes decisions findable and searchable!
 
@@ -143,5 +158,5 @@ PROMOTED: : Added 1% Better improvement feature
 
 ---
 
-*Skill version: 1.0 - Created: May 10, 2026*
+*Skill version: 2.0 - Updated: May 11, 2026*
 *Part of Mochi Focus Memory System v2.1*

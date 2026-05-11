@@ -113,13 +113,21 @@ When doing research (Mega Dive, study, etc.), ALWAYS cite where information came
 
 Question: "What would Jeem say?" - if uncertain, ask BEFORE proceeding.
 
-### 4. Auto Memory - Learn Automatically
+### 4. Auto Memory - Learn Automatically (v2.0 - WITH CATEGORIES!)
 
 **When you correct me or reveal preferences, I should:**
 - Log it to `memory/auto-learned.md`
 - Use format:
   - `- [fact/preference] (learned: YYYY-MM-DD)`
   - `- [correction] (corrected: YYYY-MM-DD)`
+
+**Categories (v2.0):**
+- **Preferences** - Your likes/dislikes
+- **Corrections** - When you correct me
+- **Skills** - Learning about skills
+- **Decisions** - Important decisions
+- **Mistakes** - Lessons from errors
+- **Improvements** - 1% Better feedback
 
 **Learning moments to capture:**
 - Corrections: "No, that's wrong..."
@@ -203,7 +211,7 @@ Question: "What would Jeem say?" - if uncertain, ask BEFORE proceeding.
 4. Log improvement and reset counter
 5. Be PROACTIVE in suggesting ideas between prompts!
 
-### 10. Memory Audit - Regular Health Checks
+### 10. Memory Audit - Regular Health Checks (v2.0 - WITH AUTO-SNAPSHOT!)
 
 **Keep our memory system healthy!**
 - Run "memory audit" or "check memory" regularly (at least weekly)
@@ -214,6 +222,8 @@ Question: "What would Jeem say?" - if uncertain, ask BEFORE proceeding.
   - People files complete (Sara, Stuart, Momo, Hank)
   - Skills have SKILL.md files
   - Backup files exist
+  - Cross-references.md exists
+- **Auto-snapshot (v2.0):** Run `scripts/auto-snapshot.py` during every audit!
 - Run after any memory system changes
 - Fix issues immediately!
 

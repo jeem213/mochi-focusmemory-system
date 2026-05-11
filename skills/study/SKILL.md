@@ -308,6 +308,14 @@ Analyze patterns over recent memory from BOTH sources:
 
 ---
 
+## Cross-References (NEW!)
+
+**Need to find related topics?** Check `memory/cross-references.md`!
+
+This file links topics to their locations - faster than grep!
+
+---
+
 ## Related Skills
 
 - `skills/remember` - For saving to memory
