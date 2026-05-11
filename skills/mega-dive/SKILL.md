@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Jeem & Stuart
   credits: "Original concept by Jeem & Stuart"
-  version: "1.2"
+  version: "1.3"
   triggers:
     - deep dive
     - mega dive
@@ -60,6 +60,52 @@ Execute research:
 - Fetch URLs for detailed content
 - Analyze images/PDFs if relevant
 - Use other tools as needed
+
+---
+
+#### Step 2.5: WEB RESEARCH - BeautifulSoup (NEW!)
+
+**For deeper HTML parsing and data extraction!**
+
+Use the new web-research.py script:
+```bash
+/home/openclaw/.venv/bin/python scripts/web-research.py [command] <url>
+```
+
+**Commands:**
+| Command | What It Does |
+|---------|--------------|
+| `fetch <url>` | Basic page info |
+| `links <url>` | Extract all links |
+| `tables <url>` | Extract all tables |
+| `headings <url>` | Extract all headings |
+| `article <url>` | Extract main content |
+| `meta <url>` | Extract meta tags |
+| `research <url> <query>` | Custom research |
+
+**Examples:**
+```bash
+# Get all links from a research page
+python3 scripts/web-research.py links https://en.wikipedia.org/wiki/AI_agent
+
+# Extract tables (great for data!)
+python3 scripts/web-research.py tables https://example.com/pricing
+
+# Get main article content
+python3 scripts/web-research.py article https://example.com/blog/post
+
+# Research specific thing
+python3 scripts/web-research.py research https://example.com feature
+```
+
+**This is POWERFUL for:**
+- Extracting structured data from web pages
+- Building datasets from websites
+- Deep research beyond basic text fetch
+- Finding patterns in web content
+
+---
+
 
 #### Step 3: OBSERVATION
 - Incorporate new information into reasoning
@@ -274,5 +320,6 @@ Mega Dive calls/uses these skills:
 
 ---
 
-*Skill version: 1.2 - Last updated: May 6, 2026*
+*Skill version: 1.3 - Updated: May 11, 2026*
+*Note: v1.3 - Added Step 2.5: Web Research with BeautifulSoup!*
 *Note: v1.2 - Removed all Hindsight/knowledge-base references, replaced with local memory!*

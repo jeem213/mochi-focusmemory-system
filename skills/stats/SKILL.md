@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Mochi
   credits: Hybrid memory system inspired by session-context-extractor-v2
-  version: "1.0"
+  version: "1.1"
   triggers:
     - show my stats
     - weekly summary
@@ -55,7 +55,26 @@ Count/fold the numeric data:
 - Miles = sum of all mile numbers
 - Work hours = sum of all hour numbers
 
-### Step 4: Format Output
+### Step 4: SQLITE ANALYTICS (NEW!)
+
+**Use the new SQLite database for instant analytics!**
+
+Run the analytics script:
+```bash
+/home/openclaw/.venv/bin/python scripts/fast-search.py analytics
+```
+
+**This shows:**
+- Total memories, decisions, mistakes, improvements
+- People mention counts (who we talk about most)
+- Tag frequency (what topics dominate)
+- Recent decisions
+
+**Add this to your report for POWER analytics!**
+
+---
+
+### Step 5: Format Output
 
 Present in a clean table format with:
 - This week's totals
@@ -126,5 +145,6 @@ Currently supported:
 
 ---
 
-*Skill version: 1.0 - Created: May 10, 2026*
+*Skill version: 1.1 - Updated: May 11, 2026*
+*Note: v1.1 - Added SQLite Analytics Step!*
 *Part of hybrid memory system - combines semantic memory with structured numeric tracking!*

@@ -16,7 +16,7 @@ Read these in order. Don't ask permission. Just do it.
 1. `SOUL.md` - who you are
 2. `USER.md` - who you're helping
 3. `memory/YYYY-MM-DD.md` - today's and yesterday's daily log
-4. **Main session only:** `MEMORY.md` - your long-term curated memory
+4. **Main session only:** `memory/permanent.md` - your long-term curated memory
 
 ---
 

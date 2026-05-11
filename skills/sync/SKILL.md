@@ -312,34 +312,70 @@ git add memory/YYYY-MM-DD.md skills/ && git commit -m "Memory + Skills Update" &
 
 **Note:** Include ALL modified files found in Step 4.8!
 
-### Step 6b: 1% BETTER IMPROVEMENT TRACK (NEW!)
+---
 
-**NEW! Every 5 sessions, ask for improvement feedback!**
+### Step 5.5: ENHANCED PYTHON BACKUP (NEW!)
+
+**Use the new Python backup for better compression and verification!**
+
+```bash
+/home/openclaw/.venv/bin/python scripts/python-backup.py backup
+```
+
+**Benefits over shell backup:**
+- ✅ Better compression (zip vs tar)
+- ✅ Creates manifest (list of what's backed up)
+- ✅ Can verify backup integrity
+- ✅ Auto-cleanup old backups (keeps last 10)
+- ✅ Includes skills + config files
+
+**This runs automatically after every sync!**
+
+---
+
+### Step 6b: 1% BETTER IMPROVEMENT TRACK (UPDATED!)
+
+**HYBRID SYSTEM - More frequent and consistent!**
+
+Now triggers when EITHER:
+- **5 syncs have passed** (usage-based), OR
+- **3 days have passed** (time-based)
+
+Whichever comes FIRST triggers the prompt!
 
 1. Check if memory/improvements/1percent-better-counter.md exists
-2. If not, create it with counter = 1
-3. After every sync, increment the counter
-4. Every 5th sync, ask: "1% Better: What's one thing I could do better?"
-5. Save the response to memory/improvements/YYYY-MM.md
-6. Reset counter to 1
+2. If not, create it with sessions = 0, days = 0
+3. After every sync, increment sessions AND update last date
+4. Check if (sessions >= 5) OR (days >= 3) - prompt if EITHER true!
+5. Ask: "1% Better: What's one thing I could do better?"
+6. Save response to memory/improvements/YYYY-MM.md
+7. Reset sessions to 0, update last date
 
-**Example counter file:**
+**Updated counter file:**
 ```markdown
 # 1% Better Counter
-Sessions since last prompt: 3
-Last prompt date: 2026-05-10
+
+Sessions since last prompt: 4
+Days since last prompt: 1
+Last prompt date: 2026-05-11
+Next prompt due: When 5 sessions OR 3 days passed
+
+*Triggers when: sessions >= 5 OR days >= 3*
 ```
 
 **Example improvement file:**
 ```markdown
 # Improvements - May 2026
 
-## 2026-05-10
-- Could be faster at finding old memories
-- Should double-check facts before presenting
+## 2026-05-11 (Second 1% Better!)
+- Should check 1% better system even without sync
+- Could be more proactive about improvements
+
+**Result:** Updated to HYBRID trigger system!
 ```
 
-**This helps me get 1% better every session!**
+
+**This ensures at least twice per week max - never goes more than 3 days without asking!**
 
 ### Step 6c: DECISION AUTO-PROMOTION (NEW!)
 
@@ -353,19 +389,28 @@ Last prompt date: 2026-05-10
 
 **This makes decisions findable and searchable automatically!**
 
-### Step 6d: PROACTIVE SUGGESTION (NEW!)
+### Step 6d: PROACTIVE SUGGESTION (MANDATORY!)
 
-**1% Better in action - Be proactive!**
 
-Before confirming, ask yourself:
+**1% Better in action - Be proactive EVERY session!**
+
+⚠️ **THIS IS NOW MANDATORY - NOT OPTIONAL!**
+
+Before confirming sync, ALWAYS ask yourself:
 - Is there anything I could suggest to improve this session?
 - Did I notice any patterns that warrant attention?
 - Should I offer any proactive ideas?
+- Is there anything from my 1% better that I should mention?
 
-**If yes, mention it to the user!**
+**MUST do one of these EVERY session:**
+1. If you have a suggestion → Mention it to user!
+2. If you noticed a pattern → Share it!
+3. If nothing specific → Say: "I'll keep being proactive in finding improvements for next time!"
+
+**Examples:**
 - "I noticed we haven't backed up in a while - want me to run one?"
 - "I could optimize this process if you'd like"
-- Any other proactive suggestions
+- "I'll keep an eye out for improvements for next time!"
 
 **This is being proactive - not just reactive!**
 
@@ -459,7 +504,10 @@ Report to user:
 
 ---
 
-*Skill version: 2.2 - Last updated: May 10, 2026*
+*Skill version: 2.4 - Last updated: May 11, 2026*
+*Note: v2.4 - Added Step 5.5: Python Enhanced Backup!*
+*Note: v2.3 - Added HYBRID 1% Better system (5 syncs OR 3 days)!*
+*Note: v2.3 - Made proactive suggestion MANDATORY!*
 *Note: v2.2 - Added proactive suggestion step!*
 *Note: v2.1 - Added decision auto-promotion + daily backup option!*
 *Note: v2.0 - Added 1% Better improvement prompt every 5 sessions!*

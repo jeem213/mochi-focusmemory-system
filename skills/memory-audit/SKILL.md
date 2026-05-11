@@ -5,13 +5,15 @@ license: Proprietary
 metadata:
   author: Mochi
   credits: Inspired by 2026-05-11 mega dive audit
-  version: "1.1"
+  version: "1.2"
   triggers:
     - memory audit
     - audit memory
     - check memory
     - memory system check
     - memory health
+    - memory report
+    - generate report
   category: memory
   requires:
     - filesystem
@@ -231,6 +233,31 @@ ls memory/backups/ | grep -E "skills_backup|memory_backup" | wc -l
 
 ---
 
+### STEP 5.7: Verify Backups with Python (NEW!)
+
+**Use Python backup for integrity verification!**
+
+```bash
+/home/openclaw/.venv/bin/python scripts/python-backup.py verify
+```
+
+**This verifies:**
+- Backup file is valid and not corrupted
+- Can read the manifest
+- Shows backup size and item count
+
+**Also list backups:**
+```bash
+/home/openclaw/.venv/bin/python scripts/python-backup.py list
+```
+
+**Benefits:**
+- Confirm backups are actually working
+- See all available backups
+- Verify integrity before restore
+
+---
+
 ### STEP 6: Summary Report
 
 Compile all results into a clean report.
@@ -272,6 +299,45 @@ Present audit results in this format:
 
 ---
 
+### STEP 7: Generate Visual HTML Report (NEW!)
+
+**Generate a beautiful HTML dashboard of the memory system!**
+
+This uses the new Python + BeautifulSoup capabilities from the hosted image upgrade!
+
+**Command:**
+```bash
+/home/openclaw/.venv/bin/python scripts/memory-report.py
+```
+
+**What it creates:**
+- `memory/memory-report.html` - Beautiful visual report
+- Shows all stats: files, skills, rules, people, decisions, mistakes
+- Gradient design with dark theme
+- Real-time system status
+
+**Who can use:**
+- **Mochi (me)**: Run via exec, show you the results!
+- **Jeem (you)**: Run on your PC, or just ask me to generate it!
+
+**Trigger it by saying:**
+- "memory audit" - runs full audit + generates report
+- "memory report" - just generates the report
+
+**The report shows:**
+- Memory files count
+- Skills count
+- Rules count  
+- Backups count
+- People list
+- Decisions list
+- Mistakes list
+- Improvements list
+- System status (healthy/issues)
+
+---
+
+
 ## Auto-Fixes (Things I Can Fix Automatically)
 
 These issues I can fix WITHOUT asking:
@@ -310,7 +376,8 @@ Ask Jeem before fixing:
 
 ---
 
-*Skill version: 1.1 - Updated: May 11, 2026*
+*Skill version: 1.3 - Updated: May 11, 2026*
+*Note: v1.3 - Added Step 7: HTML Report + Step 5.7: Python Backup Verify!*
 *Author: Mochi - Memory + Rules Expert 🐹💜*
 *Changes in v1.1:*
 *- Added Step 2.5: Key memory files check (permanent.md, auto-learned.md)*

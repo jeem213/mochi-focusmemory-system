@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Jeem & Stuart
   credits: "Original concept by Jeem & Stuart"
-  version: "1.5"
+  version: "2.0"
   triggers:
     - study
     - refresh memory
@@ -78,6 +78,28 @@ Read the most recent memory files from BOTH workspaces:
 - Stuart: `/home/openclaw/.openclaw/workspace/memory/` (last 3-5 days)
 
 This ensures we get BOTH perspectives on what happened!
+
+---
+
+### Step 4.5: FAST SEARCH (SQLite - NEW!)
+
+**Use SQLite for instant person/topic lookups!**
+
+For quick lookups, use the fast search:
+```bash
+/home/openclaw/.venv/bin/python scripts/fast-search.py search [person/topic]
+```
+
+**Examples:**
+```bash
+/home/openclaw/.venv/bin/python scripts/fast-search.py search sara
+/home/openclaw/.openclaw/.venv/bin/python scripts/fast-search.py search stuart
+/home/openclaw/.venv/bin/python scripts/fast-search.py search memory
+```
+
+**This is WAY faster than grep for person lookups!**
+
+---
 
 ### Step 5: READ PEOPLE FOLDER (HYBRID!)
 
@@ -347,7 +369,8 @@ Don't forget Step 11! Extract #task items FIRST - they're priority.
 
 ---
 
-*Skill version: 1.9 - Last updated: May 10, 2026*
+*Skill version: 2.0 - Updated: May 11, 2026*
+*Note: v2.0 - Added SQLite Fast Search Step 4.5!*
 *Note: v1.9 - Added proactive suggestions!*
 *Note: v1.8 - Added improvements folder check!*
 *Note: v1.7 - Added scripts folder check!*
