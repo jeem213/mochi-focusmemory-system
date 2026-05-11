@@ -62,7 +62,10 @@ Every AI agent has the same problem: **forgetting**. Conversations end, context 
 | **study** | Load all memories, catch up instantly |
 | **mega-sync** | Full system health check |
 | **stats** | Weekly numeric summaries |
-| **+ 28 more** | Analysis, brainstorming, creativity, etc. |
+| **memory-audit** | Check memory system health |
+| **decisions** | Auto-promote decisions |
+| **mega-dive** | Deep research + analysis |
+| **repo-audit** | Compare local vs public repo |
 
 ---
 
