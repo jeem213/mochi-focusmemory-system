@@ -4,7 +4,7 @@ description: Save conversations to memory with AUTO TAGGING + personal GitHub ba
 license: Proprietary
 metadata:
   author: Jeem & Stuart
-  version: "1.7"
+  version: "2.4"
   triggers:
     - sync
     - sync now
