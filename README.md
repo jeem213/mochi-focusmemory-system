@@ -249,7 +249,8 @@ Workspace configuration:
 | 1.0 | May 10, 2026 | Initial release - Hybrid memory system |
 | 2.0 | May 10, 2026 | Added 1% Better improvements |
 | 2.3 | May 11, 2026 | Added Python Scripts: memory-report, fast-search, python-backup, web-research |
-| 2.4 | May 11, 2026 | Python scripts now included in repo! |
+| 2.4 | May 11, 2026 | Python scripts now included in repo!
+| 2.5 | May 11, 2026 | Updated skills: memory-audit v1.4, mega-sync v1.7, sync v2.5 |
 
 ---
 
