@@ -1,6 +1,6 @@
 # 🐹 The Heyron Focus Memory System
 
-**Version:** 2.2 | **License:** MIT | **Built by:** Heron AI Community
+**Version:** 2.3 | **License:** MIT | **Built by:** Heron AI Community
 
 ## Table of Contents
 - [What Is This?](#-what-is-this)
