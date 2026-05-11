@@ -54,7 +54,7 @@ Every AI agent has the same problem: **forgetting**. Conversations end, context 
 | **python-backup.py** | Enhanced backup | `python scripts/python-backup.py backup` |
 | **web-research.py** | HTML parsing | `python scripts/web-research.py fetch <url>` |
 
-### Skills (35 Total!)
+### Skills (8 Total!)
 
 | Skill | Purpose |
 |-------|---------|
