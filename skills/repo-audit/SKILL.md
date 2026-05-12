@@ -8,6 +8,8 @@
 - Compare versions, check README, verify completeness
 - Only push AFTER completing all steps
 
+**CRITICAL: This skill now does 100% LINE-BY-LINE diff for EVERY file!**
+
 ---
 name: repo-audit
 description: Compare local memory system with public GitHub repo, identify differences, and recommend updates. Use when you want to sync local changes to public repo - says "repo audit", "compare repo", or "sync public repo".
@@ -15,7 +17,7 @@ license: Proprietary
 metadata:
   author: Mochi
   credits: Inspired by May 11, 2026 mega dive comparison
-  version: "1.7"
+  version: "1.8"
   triggers:
     - repo audit
     - compare repo
@@ -30,9 +32,11 @@ metadata:
     - filesystem
 ---
 
-# Repo Audit Skill
+# Repo Audit Skill (v1.8 - 100% DIFF CHECK!)
 
 Compare local memory system with public GitHub repo, identify differences, and recommend updates.
+
+**NEW in v1.8:** LINE-BY-LINE diff for ALL files - skills, rules, and scripts!
 
 ## When to Use This Skill
 
@@ -56,13 +60,19 @@ Triggered when Jeem says:
 - If user specifies different repo, use that
 - Otherwise use default
 
+**Ensure local clone is up-to-date:**
+```bash
+cd /home/openclaw/.openclaw/mochi-focusmemory-system
+git pull origin main
+```
+
 ---
 
 ### STEP 2: Fetch Public Repo File List
 
 **Get list of files in public repo:**
 ```bash
-git ls-tree -r --name-only public/main
+git ls-tree -r --name-only origin main
 # OR
 curl -s https://api.github.com/repos/jeem213/mochi-focusmemory-system/contents | jq -r '.[].name'
 ```
@@ -112,12 +122,17 @@ grep "^  version:" skills/memory-audit/SKILL.md
 grep "^  version:" ../mochi-focusmemory-public/skills/memory-audit/SKILL.md
 ```
 
-**Skills to check:**
-- memory-audit
-- mega-dive
-- stats
+**Skills to check (ALL 10):**
 - study
 - sync
+- mega-dive
+- mega-sync
+- memory-audit
+- stats
+- decisions
+- full-sync
+- remember
+- repo-audit
 
 **What to verify:**
 - Version numbers match
@@ -129,19 +144,110 @@ grep "^  version:" ../mochi-focusmemory-public/skills/memory-audit/SKILL.md
 
 ---
 
-### STEP 2.7: LINE-BY-LINE DIFF (Advanced)
+### STEP 2.7: LINE-BY-LINE DIFF FOR ALL SKILLS (MANDATORY!)
 
-**For complete accuracy, do a diff:**
+**🚨 NEW STEP - 100% CONTENT VERIFICATION!**
+
+This is MANDATORY for every audit! Use local clone to avoid API rate limits.
+
+**For EACH of the 10 memory skills, do a LINE-BY-LINE diff:**
+
 ```bash
-diff skills/memory-audit/SKILL.md ../mochi-focusmemory-public/skills/memory-audit/SKILL.md
+# Compare each skill
+diff skills/study/SKILL.md ../mochi-focusmemory-system/skills/study/SKILL.md
+diff skills/sync/SKILL.md ../mochi-focusmemory-system/skills/sync/SKILL.md
+# ... repeat for ALL 10 skills
 ```
 
-This catches:
-- Missing new steps
-- Different version numbers
-- Content differences
+**The 10 Memory Skills to check:**
+1. study
+2. sync
+3. mega-dive
+4. mega-sync
+5. memory-audit
+6. stats
+7. decisions
+8. full-sync
+9. remember
+10. repo-audit
 
-**Critical for ensuring perfection!**
+**Report format:**
+```
+✅ skill-name - 100% IDENTICAL
+❌ skill-name - DIFFERENT (X lines different)
+```
+
+**If ANY differ:**
+- Note which skill differs
+- Show first few lines of difference
+- Recommend pushing update
+
+---
+
+### STEP 2.8: LINE-BY-LINE DIFF FOR RULES FILES (MANDATORY!)
+
+**🚨 NEW STEP - 100% CONTENT VERIFICATION FOR RULES!**
+
+Compare ALL rules/config files line-by-line:
+
+```bash
+# Compare rules files
+diff SOUL.md ../mochi-focusmemory-system/SOUL.md
+diff AGENTS.md ../mochi-focusmemory-system/AGENTS.md
+diff IDENTITY.md ../mochi-focusmemory-system/IDENTITY.md
+diff USER.md ../mochi-focusmemory-system/USER.md
+```
+
+**Files to check:**
+1. SOUL.md - Identity and rules
+2. AGENTS.md - Workspace config
+3. IDENTITY.md - My identity
+4. USER.md - User profile
+
+**Report format:**
+```
+✅ SOUL.md - 100% IDENTICAL (361 lines)
+❌ AGENTS.md - DIFFERENT (128 vs 130 lines)
+```
+
+---
+
+### STEP 2.9: LINE-BY-LINE DIFF FOR SCRIPTS (MANDATORY!)
+
+**🚨 NEW STEP - 100% CONTENT VERIFICATION FOR SCRIPTS!**
+
+Compare ALL Python and shell scripts:
+
+```bash
+# Compare Python scripts
+diff scripts/memory-report.py ../mochi-focusmemory-system/scripts/memory-report.py
+diff scripts/fast-search.py ../mochi-focusmemory-system/scripts/fast-search.py
+diff scripts/python-backup.py ../mochi-focusmemory-system/scripts/python-backup.py
+diff scripts/web-research.py ../mochi-focusmemory-system/scripts/web-research.py
+
+# Compare shell scripts
+diff scripts/backup-memory.sh ../mochi-focusmemory-system/scripts/backup-memory.sh
+diff scripts/weekly-archive.sh ../mochi-focusmemory-system/scripts/weekly-archive.sh
+```
+
+**Core scripts to check (Python):**
+1. memory-report.py
+2. fast-search.py
+3. python-backup.py
+4. web-research.py
+5. auto-snapshot.py
+6. pandas-stats.py (if in public)
+
+**Core scripts to check (Shell):**
+1. backup-memory.sh
+2. backup-daily.sh
+3. weekly-archive.sh
+
+**Report format:**
+```
+✅ memory-report.py - 100% IDENTICAL
+❌ fast-search.py - DIFFERENT (added new commands)
+```
 
 ---
 
@@ -151,9 +257,9 @@ This catches:
 
 | Category | Local Count | Public Count | Gap |
 |----------|-------------|-------------|-----|
-| Skills | 34 | 7 | What missing? |
-| Scripts | 5 | 5 | ✅ Match |
-| Memory folders | 5 | 5 | ✅ Match |
+| Skills | 10 | 10 | Should match! |
+| Scripts | 10+ | 10 | Should match! |
+| Rules files | 4 | 4 | Should match! |
 
 **Identify what's MISSING from public:**
 - List local skills not in public
@@ -167,34 +273,43 @@ This catches:
 
 | Gap Type | Priority | Action |
 |----------|----------|--------|
-| Core skill missing (sync, study, mega-sync) | 🔴 HIGH | Add immediately |
-| New skill created locally | 🟡 MEDIUM | Recommend adding |
-| Documentation update | 🟡 MEDIUM | Recommend updating |
+| Core skill content differs | 🔴 HIGH | Push update immediately |
+| Rules content differs | 🔴 HIGH | Push update immediately |
+| Script content differs | 🔴 HIGH | Push update immediately |
 | Version bump needed | 🔴 HIGH | Update README |
 
 ---
 
 ### STEP 5: Recommend Updates
 
-**Present recommendations:**
+**Present recommendations with 100% verification results:**
 
 ```markdown
-## 📊 Comparison Results
+## 📊 100% Content Comparison Results
 
-| Category | Local | Public | Gap |
-|----------|-------|--------|-----|
-| Skills | 34 | 7 | 27 missing |
+### Skills (10/10 checked)
+✅ study - IDENTICAL
+✅ sync - IDENTICAL
+❌ memory-audit - DIFFERS (needs push)
+...
 
-## 🚨 HIGH Priority
-- [Skill]: [Reason]
+### Rules Files (4/4 checked)
+✅ SOUL.md - IDENTICAL
+❌ AGENTS.md - DIFFERS (needs push)
+...
 
-## 🟡 MEDIUM Priority  
-- [Skill]: [Reason]
+### Scripts (10/10 checked)
+✅ memory-report.py - IDENTICAL
+✅ fast-search.py - IDENTICAL
+...
+
+## 🚨 HIGH Priority (Content Differs)
+- [file]: [Lines different]
 
 ## 🎯 Recommended Actions
-1. Add [skill] to public repo
-2. Bump version to X.X
-3. Update README with new triggers
+1. Push [file] to public repo
+2. Update README version
+3. Re-verify after push
 ```
 
 ---
@@ -203,13 +318,10 @@ This catches:
 
 **If user approves, do:**
 
-1. Clone public repo to temp location
-2. Copy missing skill files
-3. Update README version
-4. Add new triggers to README
-5. Commit and push
-6. Clean up temp files
-7. Verify on GitHub
+1. Copy updated files to local clone
+2. Commit with descriptive message
+3. Push to GitHub
+4. **RE-RUN 100% verification after push** to confirm!
 
 ---
 
@@ -291,13 +403,27 @@ The public repo is for the **Heyron Focus Memory System** - just the memory part
 ```markdown
 # 📋 Repo Audit Results - [DATE]
 
+## 100% Content Verification
+
+### Skills (10/10)
+✅ skill1 - 100% IDENTICAL
+❌ skill2 - DIFFERENT (X lines)
+
+### Rules Files (4/4)
+✅ SOUL.md - 100% IDENTICAL
+...
+
+### Scripts (10/10)
+✅ script.py - 100% IDENTICAL
+...
+
 ## Current State
 - Local skills: [count]
 - Public skills: [count]
 - Version: [X.X]
 
 ## Differences Found
-- [Missing skill]: HIGH/MEDIUM priority
+- [file]: HIGH priority - needs push
 
 ## Recommended Updates
 1. [Action 1]
@@ -320,9 +446,10 @@ The public repo is for the **Heyron Focus Memory System** - just the memory part
 ## Pro Tips
 
 - Run this before any public release
+- ALWAYS do 100% line-by-line diff - don't skip!
+- Use local clone to avoid GitHub API rate limits
+- Re-verify AFTER pushing to confirm success
 - Always bump version in README when adding features
-- Test new skills locally before pushing to public
-- Keep public repo as "stable" - local can have experimental skills
 
 ---
 
@@ -330,11 +457,13 @@ The public repo is for the **Heyron Focus Memory System** - just the memory part
 
 | Step | Time |
 |------|------|
-| Compare file lists | 30s |
-| Check content differences | 30s |
-| Analyze each difference | 60s |
+| Compare file lists | 10s |
+| **100% diff skills (10)** | **60s** |
+| **100% diff rules (4)** | **20s** |
+| **100% diff scripts (10)** | **30s** |
+| Analyze differences | 30s |
 | Create report | 20s |
-| **Total** | **~2-3 min** |
+| **Total** | **~3 min** |
 
 ---
 
@@ -346,28 +475,44 @@ The public repo is for the **Heyron Focus Memory System** - just the memory part
 | Network error | Note "GitHub unreachable", continue |
 | Permission denied | Note which files couldn't push |
 | Different repo | Stop and ask - wrong repo! |
+| Diff shows difference | Note file, recommend push |
 
 ---
 
 ## Examples
 
-### Example 1: Compare Local vs Public
+### Example 1: 100% Verification - All Match
 ```
 You: repo audit
-Mochi: 🔍 Comparing local vs public repo...
-📁 Local: 45 files | Public: 42 files
-📋 Difference: 3 new skills in local
-✅ All differences safe to push
+Mochi: 🔍 Running 100% content verification...
+📋 Skills (10/10):
+  ✅ study - 100% IDENTICAL
+  ✅ sync - 100% IDENTICAL
+  ✅ mega-dive - 100% IDENTICAL
+  ...
+📋 Rules (4/4):
+  ✅ SOUL.md - 100% IDENTICAL
+  ✅ AGENTS.md - 100% IDENTICAL
+  ...
+📋 Scripts (10/10):
+  ✅ memory-report.py - 100% IDENTICAL
+  ...
+🎉 Public repo is 100% in sync!
 ```
 
-### Example 2: Check Before Release
+### Example 2: 100% Verification - Differences Found
 ```
 You: repo audit
-Mochi: 🔍 Running pre-release audit...
-✅ No private data found
-✅ README in sync
-✅ Skills all compliant
-✅ Ready for public release!
+Mochi: 🔍 Running 100% content verification...
+📋 Skills (10/10):
+  ✅ study - 100% IDENTICAL
+  ❌ sync - DIFFERENT (5 new lines added)
+  ...
+📋 Rules (4/4):
+  ✅ SOUL.md - 100% IDENTICAL
+  ❌ AGENTS.md - DIFFERENT (2 new platform rules)
+  ...
+🎯 2 files need pushing!
 ```
 
 ---
@@ -380,7 +525,6 @@ Mochi: 🔍 Running pre-release audit...
 
 ---
 
-*Skill version: 1.5 - Updated: May 11, 2026*
-*Note: v1.5 - Added Step 2.6: Skill Version Comparison + Python Scripts check!*
-*Note: v1.4 - README sync only for MEMORY SYSTEM changes (not all skills!)*
+*Skill version: 1.8 - Updated: May 12, 2026*
+*Note: v1.8 - Added 100% LINE-BY-LINE diff for ALL skills, rules, and scripts!*
 *Author: Mochi - Memory + Rules Expert 🐹💜*
