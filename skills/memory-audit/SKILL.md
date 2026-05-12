@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Mochi
   credits: Inspired by 2026-05-11 mega dive audit
-  version: "1.4"
+  version: "1.5"
   triggers:
     - memory audit
     - audit memory
