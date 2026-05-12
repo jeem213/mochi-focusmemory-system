@@ -377,7 +377,8 @@ Don't forget Step 11! Extract #task items FIRST - they're priority.
 
 ---
 
-*Skill version: 2.0 - Updated: May 11, 2026*
+*Skill version: 2.1 - Updated: May 12, 2026*
+*Note: v2.1 - Added Quick Recall Index reference (memory/index.md)!*
 *Note: v2.0 - Added SQLite Fast Search Step 4.5!*
 *Note: v1.9 - Added proactive suggestions!*
 *Note: v1.8 - Added improvements folder check!*

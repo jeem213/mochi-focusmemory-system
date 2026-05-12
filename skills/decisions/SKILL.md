@@ -158,5 +158,58 @@ PROMOTED: : Added 1% Better improvement feature
 
 ---
 
-*Skill version: 2.0 - Updated: May 11, 2026*
+## Time Estimate
+
+| Step | Time |
+|------|------|
+| Scan memory files | 10s |
+| Extract decisions | 20s |
+| Promote to folder | 15s |
+| Report | 5s |
+| **Total** | **~50s** |
+
+---
+
+## Error Handling
+
+| Error | What to Do |
+|-------|------------|
+| No decisions found | Show "No decisions found" message |
+| Deduplication skip | Show count of skipped duplicates |
+| File write error | Note which file failed, continue |
+| Empty memory folder | Note "No memory files to scan" |
+
+---
+
+## Examples
+
+### Example 1: Manual Trigger
+```
+You: promote decisions
+Mochi: Scanning memory files...
+📋 Found 5 decisions in today's session
+✅ Promoted 3 new decisions
+⏭️ Skipped 2 duplicates
+```
+
+### Example 2: Auto-Promotion After Sync
+```
+🔄 Sync Complete
+📋 Auto-promoting decisions...
+✅ Promoted: Memory system decisions
+✅ Promoted: Momo creation decisions
+```
+
+---
+
+## Related Skills
+
+- `skills/sync` - Save session with auto-tagging
+- `skills/study` - Load memories
+- `skills/memory-audit` - Audit memory system
+
+---
+
+*Skill version: 2.1 - Updated: May 12, 2026*
+*Note: v2.1 - Updated to use Decision Templates v2.0 (status, outcome, owner fields)*
 *Part of Mochi Focus Memory System v2.1*

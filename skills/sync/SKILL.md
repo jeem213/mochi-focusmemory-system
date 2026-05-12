@@ -490,6 +490,80 @@ This creates a silent snapshot of:
 
 **This makes EVERY SYNC a FULL SYSTEM CHECK!**
 
+### Step 6g: RELATIONSHIP GRAPH AUTO-MAP (v2.1)
+
+**Auto-link related topics!**
+
+```bash
+python3 scripts/relationship-graph.py
+```
+
+This scans recent memories and auto-updates cross-references.md with topic relationships!
+
+### Step 6h: ERROR PATTERN DETECTOR (v2.1)
+
+**Check for recurring mistakes!**
+
+```bash
+python3 scripts/error-pattern-detector.py
+```
+
+This scans memory/mistakes/ for patterns and generates recommendations!
+
+### Step 6i: TAGS DASHBOARD UPDATE (v2.1)
+
+**Update tag analytics!**
+
+
+```bash
+python3 scripts/tags-dashboard.py
+```
+
+This generates visual tag usage statistics!
+
+### Step 6j: PREFERENCE CONFIDENCE UPDATE (v2.1)
+
+**Update preference confidence levels!**
+
+
+```bash
+python3 scripts/preference-confidence.py
+```
+
+This tracks how confident we are in learned preferences!
+
+---
+
+**New in v2.1:** Every sync now runs 4 new analytics scripts!
+- Relationship Graph Auto-Map
+- Error Pattern Detector
+- Tags Dashboard
+- Preference Confidence Tracker
+
+### Step 6k: PANDAS STATS (v2.9)
+
+**Advanced numeric data analysis!**
+
+```bash
+python3 scripts/pandas-stats.py
+```
+
+This uses pandas to analyze gym/work stats with week-over-week comparison!
+
+### Step 6l: DATA PROCESSOR (v2.9)
+
+**Full memory data analysis!**
+
+```bash
+python3 scripts/data-processor.py
+```
+
+This processes: daily entries, tag distribution, people tracking, decisions, mistakes, improvements!
+
+---
+
+**v2.9 Update:** Added pandas-stats.py and data-processor.py for advanced analytics!
+
 
 ### Step 7: CONFIRM
 
@@ -589,7 +663,9 @@ Mochi: [what happens]
 
 ---
 
-*Skill version: 2.7 - Last updated: May 11, 2026*
+*Skill version: 2.9 - Last updated: May 12, 2026*
+*Note: v2.9 - Added Steps 6k-6l: pandas-stats.py and data-processor.py!*
+*Note: v2.8 - Added Steps 6g-6j: New analytics scripts (relationship, errors, tags, preferences)!*
 *Note: v2.7 - Added Step 6f: Memory Health Check (auto-snapshot on every sync)!*
 *Note: v2.5 - Added v2.0 templates for auto-learned + mistakes!*
 *Note: v2.4 - Added Step 5.5: Python Enhanced Backup!*

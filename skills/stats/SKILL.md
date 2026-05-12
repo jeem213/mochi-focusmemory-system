@@ -116,6 +116,14 @@ Currently supported:
 
 ---
 
+## Examples
+
+### Example 1
+```
+You: [trigger phrase]
+Mochi: [what happens]
+```
+
 ## Related Skills
 
 - `skills/study` - Full memory refresh

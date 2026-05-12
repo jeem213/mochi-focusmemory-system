@@ -326,6 +326,60 @@ The public repo is for the **Heyron Focus Memory System** - just the memory part
 
 ---
 
+## Time Estimate
+
+| Step | Time |
+|------|------|
+| Compare file lists | 30s |
+| Check content differences | 30s |
+| Analyze each difference | 60s |
+| Create report | 20s |
+| **Total** | **~2-3 min** |
+
+---
+
+## Error Handling
+
+| Error | What to Do |
+|-------|------------|
+| Git not available | Note in report, skip git checks |
+| Network error | Note "GitHub unreachable", continue |
+| Permission denied | Note which files couldn't push |
+| Different repo | Stop and ask - wrong repo! |
+
+---
+
+## Examples
+
+### Example 1: Compare Local vs Public
+```
+You: repo audit
+Mochi: 🔍 Comparing local vs public repo...
+📁 Local: 45 files | Public: 42 files
+📋 Difference: 3 new skills in local
+✅ All differences safe to push
+```
+
+### Example 2: Check Before Release
+```
+You: repo audit
+Mochi: 🔍 Running pre-release audit...
+✅ No private data found
+✅ README in sync
+✅ Skills all compliant
+✅ Ready for public release!
+```
+
+---
+
+## Related Skills
+
+- `skills/sync` - Save to memory + GitHub
+- `skills/memory-audit` - Audit local memory system
+- `skills/mega-sync` - Full system health check
+
+---
+
 *Skill version: 1.5 - Updated: May 11, 2026*
 *Note: v1.5 - Added Step 2.6: Skill Version Comparison + Python Scripts check!*
 *Note: v1.4 - README sync only for MEMORY SYSTEM changes (not all skills!)*
