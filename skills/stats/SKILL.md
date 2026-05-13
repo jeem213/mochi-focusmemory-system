@@ -5,7 +5,7 @@ license: Proprietary
 metadata:
   author: Mochi
   credits: Hybrid memory system inspired by session-context-extractor-v2
-  version: "1.1"
+  version: "1.2"
   triggers:
     - show my stats
     - weekly summary
@@ -139,6 +139,7 @@ Mochi: [what happens]
 | No numeric data found | Show \"No data logged yet - just tell me your numbers!\" |
 | Only some data found | Show what's available, mark others as TBD |
 | Memory files missing | Show partial data, note limitation |
+| Python script fails | Fallback: read auto-learned.md directly and extract manually |
 
 ---
 

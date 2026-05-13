@@ -4,7 +4,7 @@ description: Save conversations to memory with AUTO TAGGING + personal GitHub ba
 license: Proprietary
 metadata:
   author: Jeem & Stuart
-  version: "2.7"
+  version: "2.10"
   triggers:
     - sync
     - sync now
@@ -205,7 +205,22 @@ If YES to any:
 | Work hours | 32 |
 ```
 
-### Step 4.7: ADD PRIORITY TAG (REQUIRED!)
+### Step 4.7: CHECK TASK DASHBOARD (NEW! Quick Win)
+
+**IMPORTANT: Add any #task items to central dashboard!**
+
+After saving memory, check if any tasks were created:
+1. Scan session notes for task-like items
+2. If tasks found, add to `memory/tasks-dashboard.md`
+3. Include: task description, created date, priority
+
+**Example task entry:**
+```
+| Review PR | 2026-05-13 | High | Open |
+```
+
+### Step 4.8: ADD PRIORITY TAG (REQUIRED!)
+
 
 **⚠️ MANDATORY - Per SOUL.md Memory Rules!**
 
@@ -220,7 +235,7 @@ After analyzing conversation content, you MUST add priority tag:
 - "We decided to add memory rules" → #important #decision
 - "Just chatting about the game" → #routine
 
-### Step 4.7b: UPDATE TAG HISTORY (NEW!)
+### Step 4.9: UPDATE TAG HISTORY (NEW!)
 
 **IMPORTANT: Track tags for smarter suggestions!**
 
@@ -237,7 +252,7 @@ After auto-tagging, record to memory/tag-history.md:
 | 2026-05-11 | Rules/Memory/Repo Audit | #session #rules #memory #important | No |
 ```
 
-### Step 4.8: CHECK CROSS-REFERENCES (IMPLEMENTED!)
+### Step 4.10: CHECK CROSS-REFERENCES (IMPLEMENTED!)
 
 **IMPORTANT: Actually DO this now!**
 
@@ -269,7 +284,7 @@ Or add a new remote:
 git remote add mochi-backup https://github.com/jeem213/mochi-backup
 ```
 
-### Step 4.10: REVIEW AUTO-LEARNED MEMORY
+### Step 4.11: REVIEW AUTO-LEARNED MEMORY
 
 **IMPORTANT: After saving memory, check auto-learned.md!**
 
@@ -279,7 +294,7 @@ Read `memory/auto-learned.md` and:
 3. Suggest to user: "I found X new learnings. Want me to promote any to permanent memory?"
 4. Tag any promoted items with #auto-learned
 
-### Step 4.11: CHECK ALL MODIFIED FILES
+### Step 4.12: CHECK ALL MODIFIED FILES
 
 **IMPORTANT: Don't just back up memory!**
 
@@ -307,7 +322,7 @@ Modified: memory/2026-05-06.md
 Also found modified skills - want to back those up too?
 ```
 
-### Step 4.12: CREATE MEMORY SNAPSHOT
+### Step 4.13: CREATE MEMORY SNAPSHOT
 
 **If #important tag is used, ALSO create a snapshot!**
 
@@ -663,7 +678,7 @@ Mochi: [what happens]
 
 ---
 
-*Skill version: 2.9 - Last updated: May 12, 2026*
+*Skill version: 2.10 - Last updated: May 13, 2026*
 *Note: v2.9 - Added Steps 6k-6l: pandas-stats.py and data-processor.py!*
 *Note: v2.8 - Added Steps 6g-6j: New analytics scripts (relationship, errors, tags, preferences)!*
 *Note: v2.7 - Added Step 6f: Memory Health Check (auto-snapshot on every sync)!*
